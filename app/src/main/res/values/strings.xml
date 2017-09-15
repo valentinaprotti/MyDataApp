@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">GoBoBus</string>
+    <string name="title_activity_new_profile">NewProfileActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Request General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Request settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Request settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <!--                     Add                        -->
+    <string name="withdraw_desc">Revoca il consenso alla condivisione di tutti i dati</string>
+    <string name="withdraw_text">Revoca\nconsenso</string>
+    <string name="disable_desc">Disattiva il consenso alla condivisione di tutti i dati (può essere riattivato)</string>
+    <string name="disable_text">Disabilita\nconsenso</string>
+    <string name="consent_desc">Mostra tutti i data consent emessi in precedenza</string>
+    <string name="consent_text">Visualizza\ndata consent</string>
+    <string name="tv_location_text">Condividi Posizione</string>
+    <string name="tv_latitude_text">Condividi Latitudine</string>
+    <string name="tv_longitude_text">Condividi Longitudine</string>
+    <string name="tv_route_text">Condividi Percorso</string>
+    <string name="tv_stop_text">Condividi Fermata</string>
+
+    <string name="ib_newaccount_desc">Nuovo Account MyData</string>
+
+    <string name="tv_dataconsent_title_text">Data Consent creati</string>
+    <string name="tv_dataconsent_text">• Testo di prova linea 1\n• Testo di prova linea 2</string>
+    <string name="title_activity_login">Accedi</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <!--                                                -->
+</resources>

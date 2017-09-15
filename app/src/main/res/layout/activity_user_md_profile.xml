@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="unibo.progettotesi.activities.UserMDProfileActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayoutConsent">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/button_dataconsent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#00897b"
+            android:textColor="#000000"
+            android:layout_gravity="end"
+            android:text="@string/consent_text"
+            android:textAlignment="center"
+            android:onClick="viewDataConsents"
+            android:contentDescription="@string/consent_desc" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/linearLayoutConsentOptions">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/button_disable"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#80cbc4"
+                android:textColor="#000000"
+                android:layout_gravity="end"
+                android:text="@string/disable_text"
+                android:textAlignment="center"
+                android:onClick="disableOption"
+                android:contentDescription="@string/disable_desc" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/button_withdraw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#26a69a"
+                android:textColor="#000000"
+                android:layout_gravity="end"
+                android:text="@string/withdraw_text"
+                android:textAlignment="center"
+                android:onClick="withdrawOption"
+                android:contentDescription="@string/withdraw_desc" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayoutConsent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/locationSwitch"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/tv_location_text"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                android:layout_marginTop="10dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/latitudeSwitch"
+                android:text="@string/tv_latitude_text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                android:layout_marginTop="10dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/longitudeSwitch"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/tv_longitude_text"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                android:layout_marginTop="10dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/routeSwitch"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/tv_route_text"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                android:layout_marginTop="10dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/stopSwitch"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/tv_stop_text"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                android:layout_marginTop="10dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="unibo.progettotesi">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.NewProfileActivityB"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.FavoritesProfileB"
+            android:label="Preferiti"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.InputFormB"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.NewTripActivityB"
+            android:label="Nuovo Viaggio"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.SelectRouteActivityB"
+            android:label="Scegli Percorso"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.BusWaitingActivity"
+            android:label="Alla Fermata"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.OnTheGoActivity"
+            android:label="Sul Bus"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.DestinationActivityB"
+            android:label="Verso Destinazione"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.ProfileManagingActivityB"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.EditDeleteActivityB"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.EditActivityB"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.EditNameProfile"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+            >
+        </activity>
+
+        <!-- Add -->
+        <activity
+            android:name=".activities.UserMDProfileActivity"
+            android:label="Profilo Utente MyData"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.NewMDAccountActivity"
+            android:label="Nuovo Utente MyData"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.DataConsentActivity"
+            android:label="Data Consent passati"
+            android:parentActivityName=".activities.UserMDProfileActivity"
+            android:screenOrientation="portrait">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.UserMDProfileActivity"/>
+        </activity>
+        <!--  -->
+
+        <service android:name=".utilities.ActivityRecognitionService"/>
+        <service android:name=".utilities.ActivityRecognitionService$NotificationActionService"/>
+
+    </application>
+
+</manifest>
