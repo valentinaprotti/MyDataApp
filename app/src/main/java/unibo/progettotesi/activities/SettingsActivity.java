@@ -97,6 +97,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 			controller.logInUser("nomecognome@prova.it", "password".toCharArray());
 			Toast.makeText(this, this.getIntent().getStringExtra("EXTRA_CLOSED"), Toast.LENGTH_SHORT).show();
 		}
+
+		user = ((MyController)controller).getUser();
 		// -----------------------------------------------------------------
 		// -----------------------------------------------------------------
 
@@ -252,6 +254,15 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 			case R.id.button_consent:
 				if (controller.getAllActiveServicesForUser().contains(service)) {
 					// L'utente ha un account attivo/disabilitato presso il servizio: va avviata l'activity UserMDProfileActivity
+					// test
+					/* try {
+						service.provideService(user);
+						service.provideService(user);
+						service.provideService(user);
+					} catch (IOException e) {
+						e.printStackTrace();
+					} */
+
 					i = new Intent(SettingsActivity.this, UserMDProfileActivity.class);
 				} else {
 					// No account presso il servizio: va avviata l'activity NewMDAccountActivity
